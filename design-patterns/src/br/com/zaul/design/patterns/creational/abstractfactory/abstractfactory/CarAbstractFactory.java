@@ -1,4 +1,10 @@
-package br.com.zaul.design.patterns.creational.abstractfactory;
+package br.com.zaul.design.patterns.creational.abstractfactory.abstractfactory;
+
+import br.com.zaul.design.patterns.creational.abstractfactory.CarFactory;
+import br.com.zaul.design.patterns.creational.abstractfactory.CarModel;
+import br.com.zaul.design.patterns.creational.abstractfactory.abstractproduct.Car;
+import br.com.zaul.design.patterns.creational.abstractfactory.concretefactory.Fiat;
+import br.com.zaul.design.patterns.creational.abstractfactory.concretefactory.Volkswagen;
 
 public abstract class CarAbstractFactory {
 

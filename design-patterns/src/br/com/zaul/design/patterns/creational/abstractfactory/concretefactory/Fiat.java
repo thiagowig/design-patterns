@@ -1,6 +1,6 @@
 package br.com.zaul.design.patterns.creational.abstractfactory.concretefactory;
 
-import br.com.zaul.design.patterns.creational.abstractfactory.CarModel;
+import br.com.zaul.design.patterns.creational.abstractfactory.CarName;
 import br.com.zaul.design.patterns.creational.abstractfactory.abstractfactory.CarAbstractFactory;
 import br.com.zaul.design.patterns.creational.abstractfactory.abstractproduct.Car;
 import br.com.zaul.design.patterns.creational.abstractfactory.concreteproduct.Bravo;
@@ -9,11 +9,11 @@ import br.com.zaul.design.patterns.creational.abstractfactory.concreteproduct.Pa
 public class Fiat extends CarAbstractFactory {
 
 	@Override
-	public Car getCar(CarModel carModel) {
-		if (carModel.equals(CarModel.PALIO)) {
+	public Car getCar(CarName carModel) {
+		if (carModel.equals(CarName.PALIO)) {
 			return new Palio();
 			
-		} else if (carModel.equals(CarModel.BRAVO)) {
+		} else if (carModel.equals(CarName.BRAVO)) {
 			return new Bravo();
 		}
 		

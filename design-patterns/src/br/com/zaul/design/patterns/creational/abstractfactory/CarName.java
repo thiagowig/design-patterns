@@ -1,6 +1,6 @@
 package br.com.zaul.design.patterns.creational.abstractfactory;
 
-public enum CarModel {
+public enum CarName {
 	
 	PALIO,
 	BRAVO,

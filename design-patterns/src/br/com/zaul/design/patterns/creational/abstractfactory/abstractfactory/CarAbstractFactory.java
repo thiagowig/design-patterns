@@ -1,7 +1,7 @@
 package br.com.zaul.design.patterns.creational.abstractfactory.abstractfactory;
 
-import br.com.zaul.design.patterns.creational.abstractfactory.CarFactory;
-import br.com.zaul.design.patterns.creational.abstractfactory.CarModel;
+import br.com.zaul.design.patterns.creational.abstractfactory.CarFactoryType;
+import br.com.zaul.design.patterns.creational.abstractfactory.CarName;
 import br.com.zaul.design.patterns.creational.abstractfactory.abstractproduct.Car;
 import br.com.zaul.design.patterns.creational.abstractfactory.concretefactory.Fiat;
 import br.com.zaul.design.patterns.creational.abstractfactory.concretefactory.Volkswagen;
@@ -10,9 +10,9 @@ public abstract class CarAbstractFactory {
 
 	private static CarAbstractFactory carAbstractFactory;
 	
-	public abstract Car getCar(CarModel carModel);
+	public abstract Car getCar(CarName carModel);
 	
-	public static CarAbstractFactory getInstance(CarFactory carFactory) {
+	public static CarAbstractFactory getInstance(CarFactoryType carFactory) {
 		if (carAbstractFactory == null) {
 			generateInstance(carFactory);
 		}
@@ -20,11 +20,11 @@ public abstract class CarAbstractFactory {
 		return carAbstractFactory;
 	}
 
-	private static void generateInstance(CarFactory carFactory) {
-		if (carFactory.equals(CarFactory.VOLKSWAGEN)) {
+	private static void generateInstance(CarFactoryType carFactory) {
+		if (carFactory.equals(CarFactoryType.VOLKSWAGEN)) {
 			carAbstractFactory = new Volkswagen();
 			
-		} else if (carFactory.equals(CarFactory.FIAT)) {
+		} else if (carFactory.equals(CarFactoryType.FIAT)) {
 			carAbstractFactory = new Fiat();
 		}
 		
